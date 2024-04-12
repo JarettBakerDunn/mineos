@@ -2906,7 +2906,7 @@ $as_echo_n "checking whether $F77 accepts -g... " >&6; }
 if ${ac_cv_prog_f77_g+:} false; then :
   $as_echo_n "(cached) " >&6
 else
-  FFLAGS=-g
+  FFLAGS="-g -fallow-argument-mismatch"
 cat > conftest.$ac_ext <<_ACEOF
       program main
 
@@ -2926,15 +2926,15 @@ if test "$ac_test_FFLAGS" = set; then
   FFLAGS=$ac_save_FFLAGS
 elif test $ac_cv_prog_f77_g = yes; then
   if test "x$ac_cv_f77_compiler_gnu" = xyes; then
-    FFLAGS="-g -O2"
+    FFLAGS="-g -O2 -fallow-argument-mismatch"
   else
-    FFLAGS="-g"
+    FFLAGS="-g -fallow-argument-mismatch"
   fi
 else
   if test "x$ac_cv_f77_compiler_gnu" = xyes; then
-    FFLAGS="-O2"
+    FFLAGS="-O2 -fallow-argument-mismatch"
   else
-    FFLAGS=
+    FFLAGS="-fallow-argument-mismatch"
   fi
 fi
 
